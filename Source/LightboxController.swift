@@ -139,9 +139,9 @@ open class LightboxController: UIViewController {
   open weak var imageTouchDelegate: LightboxControllerTouchDelegate?
   open internal(set) var presented = false
   open fileprivate(set) var seen = false
-
+  open var pageViews = [PageView]()
+    
   lazy var transitionManager: LightboxTransition = LightboxTransition()
-  var pageViews = [PageView]()
   var statusBarHidden = false
 
   fileprivate let initialImages: [LightboxImage]

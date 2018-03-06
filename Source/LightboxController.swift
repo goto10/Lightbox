@@ -134,6 +134,12 @@ open class LightboxController: UIViewController {
     }
   }
 
+    open var currentImage: UIImage? {
+        get {
+            return pageViews[currentPage].imageView.image
+        }
+    }
+    
   open weak var pageDelegate: LightboxControllerPageDelegate?
   open weak var dismissalDelegate: LightboxControllerDismissalDelegate?
   open weak var imageTouchDelegate: LightboxControllerTouchDelegate?
